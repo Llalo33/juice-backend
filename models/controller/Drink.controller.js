@@ -19,7 +19,7 @@ const juiceController = {
   },
   getSpecificDrink: async (req, res) => {
     try {
-        const juice = await Juice.find(req.params.id)
+        const juice = await Juice.findById(req.params.id)
         res.json(juice)
     } catch (error) {
         res.json(error.message)
